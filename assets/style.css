@@ -34,22 +34,33 @@ header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 header nav ul li {
-    margin: 0 1rem;
+    margin: 0.25rem 0.5rem; /* Reduced margin */
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem; /* Reduced padding */
     border-radius: 0.3rem;
     transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping within the link */
 }
 
 header nav ul li a:hover {
     background-color: #005588;
+}
+
+/* CV Button */
+header nav ul li a[href="assets/CV_PhD__Copy_.pdf"] {
+    background-color: #4CAF50; /* Green */
+}
+
+header nav ul li a[href="assets/CV_PhD__Copy_.pdf"]:hover {
+    background-color: #45a049;
 }
 
 /* Main Sections */
@@ -86,15 +97,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* CV Button */
-header nav ul li a[href="assets/CV_PhD__Copy_.pdf"] {
-    background-color: #4CAF50; /* Green */
-}
-
-header nav ul li a[href="assets/CV_PhD__Copy_.pdf"]:hover {
-    background-color: #45a049;
-}
-
 /* Home Page Styles */
 .home-content {
     display: flex;
@@ -122,4 +124,75 @@ header nav ul li a[href="assets/CV_PhD__Copy_.pdf"]:hover {
     height: auto;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (e.g., phones) */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    header nav ul li a {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .research-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .research-gallery img {
+        max-width: 100%;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills div {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* For screens between 768px and 992px (e.g., tablets) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        padding: 15px;
+    }
+
+    .home-content {
+        gap: 1rem;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
 }
