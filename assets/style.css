@@ -242,3 +242,27 @@ a:hover {
     width: 100%;
     z-index: 10; /* Ensure it's on top */
 }
+
+/* About Me Section */
+.about-content {
+    margin-left: 20px; /* Indent the entire content */
+}
+
+.about-section {
+    margin-bottom: 1rem; /* Add spacing between sections */
+}
+
+.about-section h3 {
+    font-size: 1.2rem; /* Slightly larger heading */
+    margin-bottom: 0.5rem; /* Spacing below heading */
+}
+
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 20px; /* Indent the lists */
+}
+
+.about-section ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
