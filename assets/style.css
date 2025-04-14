@@ -267,3 +267,48 @@ a:hover {
     list-style-type: circle;
     margin-left: 30px; /* Further indent nested lists */
 }
+
+/* Publications Section */
+section#publications {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+section#publications h2 {
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #003366;
+}
+
+section#publications ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section#publications li {
+    margin-bottom: 1rem;
+}
+
+.publication-title {
+    font-weight: bold;
+}
+
+.publication-authors {
+    font-style: italic;
+}
+
+.publication-journal {
+    color: #005588;
+}
+
+.publication-doi {
+    color: #005588;
+}
+
+.publication-link {
+    color: #005588;
+    text-decoration: underline;
+}
