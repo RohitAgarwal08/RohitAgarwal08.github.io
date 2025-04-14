@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1200px; /* Increased max-width */
     margin: auto;
     padding: 20px;
 }
@@ -24,43 +24,69 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: relative; /* For positioning the hamburger */
 }
 
 header h1 {
     margin-bottom: 0.5rem;
 }
 
-header nav ul {
+/* Navigation */
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping */
+    flex-wrap: wrap;
 }
 
-header nav ul li {
-    margin: 0.25rem 0.5rem; /* Reduced margin */
+nav ul li {
+    margin: 0.1rem 0.25rem; /* Further reduced margins */
 }
 
-header nav ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 0.75rem; /* Reduced padding */
+    padding: 0.4rem 0.6rem; /* Further reduced padding */
     border-radius: 0.3rem;
     transition: background-color 0.3s ease;
-    white-space: nowrap; /* Prevent text from wrapping within the link */
+    white-space: nowrap;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     background-color: #005588;
 }
 
 /* CV Button */
-header nav ul li a[href="assets/CV_PhD__Copy_.pdf"] {
-    background-color: #4CAF50; /* Green */
+nav ul li a[href="assets/CV_PhD__Copy_.pdf"] {
+    background-color: #4CAF50;
 }
 
-header nav ul li a[href="assets/CV_PhD__Copy_.pdf"]:hover {
+nav ul li a[href="assets/CV_PhD__Copy_.pdf"]:hover {
     background-color: #45a049;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Initially hide the hamburger */
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    /* Styles for the nav wrapper */
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 /* Main Sections */
@@ -138,16 +164,20 @@ a:hover {
         padding: 0.5rem 0;
     }
 
-    header nav ul {
+    .nav-links {
+        display: none; /* Hide the full nav initially */
+    }
+
+    nav ul {
         flex-direction: column;
         align-items: center;
     }
 
-    header nav ul li {
+    nav ul li {
         margin: 0.5rem 0;
     }
 
-    header nav ul li a {
+    nav ul li a {
         padding: 0.5rem 0.75rem;
     }
 
@@ -179,6 +209,10 @@ a:hover {
         width: 100%;
         margin-bottom: 1rem;
     }
+
+    .hamburger {
+        display: block; /* Show the hamburger */
+    }
 }
 
 /* For screens between 768px and 992px (e.g., tablets) */
@@ -195,4 +229,16 @@ a:hover {
         width: 180px;
         height: 180px;
     }
+}
+
+.nav-active {
+    display: flex !important; /* Forces the nav to show */
+    flex-direction: column;
+    align-items: center;
+    background-color: #003366;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it's on top */
 }
